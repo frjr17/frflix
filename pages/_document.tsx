@@ -1,4 +1,6 @@
+import { ColorModeScript } from "@chakra-ui/react";
 import { Html, Head, Main, NextScript } from "next/document";
+import mainTheme from "../styles";
 
 export default function Document() {
   return (
@@ -9,6 +11,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
       </Head>
       <body>
+        <ColorModeScript initialColorMode={mainTheme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>
